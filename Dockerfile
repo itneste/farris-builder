@@ -1,6 +1,6 @@
-FROM node:14.20.0
+FROM alpine:latest
 
-RUN apt install git python2 \
+RUN apk add  --no-cache git python2 npm \
   && npm install @angular/cli@7.3.9 -g \
   && npm cache clean --force \
   && mkdir /app
